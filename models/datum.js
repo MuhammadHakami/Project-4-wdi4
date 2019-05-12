@@ -4,7 +4,8 @@ const Schema=mongoose.Schema
 const datumSchema=new Schema({
     title: String,
     model: String,
-    data:Number
+    train_acc:Number,
+    test_acc:Number
 })
 
 const Datum=mongoose.model('Datum',datumSchema)

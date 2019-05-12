@@ -4,7 +4,9 @@ const app=express()
 const PORT=process.env.PORT || 9000
 const mongoose=require('mongoose')
 const URL=process.env.URL
+const cors=require('cors')
 
+app.use(cors())
 mongoose.connect(URL,{useNewUrlParser:true})
 app.use(express.json())
 
